@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function vow(a) {
+            var str = a.toLowerCase();
+            const vowels = ['a','e','i','o','u'];
+            for (i=0;i<str.length;i++) {
+                if (vowels.includes(str[i])) {
+                    return "It contains vowels";
+                }
+            }
+            return "It doesn't contain vowels";
+        }
+    
+        console.log(vow("hEllo")); 
+        console.log(vow("hll"));    
+        console.log(vow("JavaScript")); 
+        console.log(vow("bcd"));   
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var dish = prompt("Enter the dish from the menu :\n 1.Biryani\n 2.Shawarma\n 3.Fried Rice\n 4.Veg Pulao\n 5.Lollipop\n 6.Chicken 65\n 7.Manchuria\n 8.Chilly Chicken\n 9.Soup\n 10.Ice Cream");
+        var a = dish.toLocaleLowerCase();
+        switch(a){
+            case "biryani" : console.log("Price of 'biryani' is 450/-");
+            break;
+            case "shawarma" : console.log("Price of 'shawarma' is 150/-");
+            break;
+            case "fried rice" : console.log("Price of 'fried rice' is 80/-");
+            break;
+            case "veg pulao" : console.log("Price of 'veg pulao' is 250/-");
+            break;
+            case "lollipop" : console.log("Price of 'lollipop' is 220/-");
+            break;
+            case "chicken 65" : console.log("Price of 'chicken 65' is 200/-");
+            break;
+            case "manchuria" : console.log("Price of 'manchuria' is 150/-");
+            break;
+            case "chilly chicken" : console.log("Price of 'chilly chicken' is 300/-");
+            break;
+            case "soup" : console.log("Price of 'soup' is 100/-");
+            break;
+            case "ice cream" : console.log("Price of 'ice cream' is 50/-");
+            break;
+            default:console.log("Dish is not available");
+        }
+    </script>
+</body>
+</html>
