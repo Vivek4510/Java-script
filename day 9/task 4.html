@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = document.createElement("h1");
+        a.innerText = "Parent";
+
+        var b = document.createElement("li");
+        b.innerText = "Child 1";
+
+        var c = document.createElement("li");
+        c.innerText = "Child 2";
+
+        var d = document.createElement("li");
+        d.innerText = "Child 3";
+
+        a.appendChild(b);
+        a.appendChild(c);
+        a.appendChild(d);
+
+        console.log(a);
+    </script>
+</body>
+</html>

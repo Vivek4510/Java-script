@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Some content</h1>
+
+    <script>
+        var a = document.getElementsByTagName("h1");
+        a[0].style.color = "red";
+        a[0].style.backgroundColor = "yellow";
+        a[0].style.fontSize = "25px";
+        a[0].style.fontFamily = "cursive";
+        console.log(a);
+        document.body.appendChild(a);
+    </script>
+</body>
+</html>
