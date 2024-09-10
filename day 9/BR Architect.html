@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var bd = document.getElementsByTagName("body");
+        bd[0].style.boxSizing = "border-box";
+        bd[0].style.margin = "0px";
+
+        var sec1 = document.createElement("div");
+        sec1.style.display = "flex";
+        sec1.style.position = "sticky";
+        sec1.style.top = "0px";
+        sec1.style.justifyContent = "space-between";
+        sec1.style.width = "100%";
+        sec1.style.zIndex = "1";
+        sec1.style.backgroundColor = "white";
+
+        var title = document.createElement("h2");
+        title.innerText = "B R Architects";
+
+        var nav = document.createElement("div");
+        nav.style.display = "flex";
+        nav.style.justifyContent="space-between";
+        nav.style.width = "20%";
+        nav.style.fontSize = "20px";
+        nav.style.paddingRight = "10px";
+        var a1 = document.createElement("p");
+        a1.innerText = "Projects";
+        var a2 = document.createElement("p");
+        a2.innerText = "About";
+        var a3 = document.createElement("p");
+        a3.innerText = "Contact";
+
+        nav.appendChild(a1);
+        nav.appendChild(a2);
+        nav.appendChild(a3);
+        sec1.appendChild(title);
+        sec1.appendChild(nav);
+        console.log(sec1);
+        document.body.appendChild(sec1);
+
+
+        var sec2 = document.createElement("div");
+        sec2.style.height = "100vh";
+        sec2.style.width = "100%";
+        sec2.style.background = 'url("https://www.w3schools.com/w3images/architect.jpg")';
+        sec2.style.backgroundRepeat = "no-repeat";
+        sec2.style.backgroundSize = "cover";
+        sec2.style.display = "flex";
+        sec2.style.justifyContent = "center";
+        sec2.style.alignItems = "center";
+
+        var txt1 = document.createElement("span");
+        txt1.innerText = "B R";
+        txt1.style.fontSize = "50px";
+        txt1.style.fontWeight = "bolder";
+        txt1.style.backgroundColor = "black";
+        txt1.style.opacity = "0.5";
+        txt1.style.height = "50px";
+        txt1.style.color = "white";
+        txt1.style.marginRight = "10px";
+        var txt2 = document.createElement("span");
+        txt2.innerText = "Architects";
+        txt2.style.fontSize = "50px";
+        txt2.style.fontWeight = "bolder";
+
+
+        sec2.appendChild(txt1);
+        sec2.appendChild(txt2);
+        console.log(sec2);
+        document.body.appendChild(sec2);
+
+        var hding = document.createElement("h1");
+        hding.innerHTML = "<u>Projects</u>";
+        hding.style.paddingTop = "15px";
+        hding.style.paddingBottom = "15px";
+        document.body.appendChild(hding);
+
+        let names=["Summer House", "Brick House", "Renovated", "Barn House", "Summer House", "Brick House", "Renovated", "Barn House"];
+        let images=["https://www.w3schools.com/w3images/house5.jpg", "https://www.w3schools.com/w3images/house2.jpg", "https://www.w3schools.com/w3images/house3.jpg", "https://www.w3schools.com/w3images/house4.jpg", "https://www.w3schools.com/w3images/house2.jpg", "https://www.w3schools.com/w3images/house5.jpg", "https://www.w3schools.com/w3images/house4.jpg", "https://www.w3schools.com/w3images/house3.jpg"];
+
+        var mn=document.createElement("div");
+        mn.style.display="grid";
+        mn.style.gridTemplateColumns="auto auto auto auto"
+        mn.style.gap="20px";
+        mn.style.width="100%";
+
+        for (i=0; i<8; i++) {
+            var el1=document.createElement("div");
+            var el1a=document.createElement("div");
+
+            el1.style.background=`url(${images[i]})`;
+            el1.style.height="15em";
+            el1.style.width="100%";
+            el1.style.backgroundRepeat="no-repeat";
+            el1.style.backgroundSize="cover";
+
+            el1a.innerText=names[i];
+            el1a.style.background="black";
+            el1a.style.color="white";
+            el1a.style.padding="10px";
+            el1a.style.fontSize="20px";
+            el1a.style.width="6.5em";
+            el1a.style.textAlign="center";
+
+            mn.appendChild(el1);
+            el1.appendChild(el1a);
+            console.log(mn);
+            
+            document.body.appendChild(mn);
+        }
+
+        var about = document.createElement("h1");
+        about.innerHTML = "<u>About</u>";
+        about.style.paddingTop = "15px";
+        about.style.paddingBottom = "15px";
+        
+        var para = document.createElement("p");
+        para.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+        para.style.fontSize = "18px";
+        para.style.fontWeight = "400";
+        para.style.padding = "15px";
+        
+        about.appendChild(para);
+        document.body.appendChild(about);
+
+
+
+        var sec4 = document.createElement("div");
+        sec4.style.display="grid";
+        sec4.style.gridTemplateColumns="auto auto auto auto"
+        sec4.style.gap="20px";
+        sec4.style.width="100%";
+
+        const n1 = ["John Doe","Jane Doe","Mike Ross","Dan Star"];
+        const prof = ["CEO & Founder","Architect","Architect","Architect"];
+        const imgs = ["https://www.w3schools.com/w3images/team2.jpg","https://www.w3schools.com/w3images/team1.jpg","https://www.w3schools.com/w3images/team3.jpg","https://www.w3schools.com/w3images/team4.jpg"];
+
+        for(i=0;i<4;i++){
+            var el2 = document.createElement("div");
+            el2.style.height = "90vh";
+            el2.style.width = "100%";
+
+            var el2a = document.createElement("div");
+            el2a.style.height = "60%";
+            el2a.style.width = "100%";
+            el2a.style.background = `url(${imgs[i]})`;
+            el2a.style.backgroundPositionX = "center";
+            el2a.style.backgroundRepeat = "no-repeat"
+        
+
+            var el2b = document.createElement("div");
+            el2b.innerText = n1[i];
+            el2b.style.fontSize = "30px";
+            el2b.style.fontWeight = "bold";
+
+            var el2c = document.createElement("div");
+            el2c.innerText = prof[i];
+            el2c.style.fontSize = "20px";
+            el2c.style.paddingTop = "30px";
+            el2c.style.fontWeight = "bold";
+
+            var el2d = document.createElement("p");
+            el2d.innerText = "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.";
+            el2d.style.fontSize = "18px";
+
+            var el2e = document.createElement("button");
+            el2e.innerText = "Contact";
+            el2e.style.width = "100%";
+            el2e.style.height = "50px";
+            el2e.style.fontSize = "18px";
+
+
+
+
+            el2.appendChild(el2a);
+            el2.appendChild(el2b);
+            el2.appendChild(el2c);
+            el2.appendChild(el2d);
+            el2.appendChild(el2e);
+            sec4.appendChild(el2);
+            document.body.appendChild(sec4);
+
+
+        }
+        var sec5 = document.createElement("div");
+        sec5.style.background = 'url("https://www.w3schools.com/w3images/map.jpg")' ;
+        sec5.style.height = "100vh";
+        sec5.style.marginTop = "75px";
+        sec5.style.backgroundRepeat = "no-repeat";
+        sec5.style.backgroundSize = "cover";
+
+        document.body.appendChild(sec5);
+
+        var sec6 = document.createElement("div");
+        sec6.innerHTML = "Powered by W3.CSS";
+        sec6.style.background = "black";
+        sec6.style.color = "white";
+        sec6.style.height = "30px";
+        sec6.style.padding = "50px";
+        sec6.style.textAlign="center";
+        sec6.style.fontSize = "18px"
+        sec6.style.marginTop = "20px"
+
+
+        document.body.appendChild(sec6);
+
+        
+    </script>
+</body>
+</html>

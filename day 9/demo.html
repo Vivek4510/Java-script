@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sec3 = document.createElement("div");
+        sec3.style.display = "grid";
+        sec3.style.gridTemplateColumns ="auto auto auto auto";
+        sec3.style.width="100%";
+
+        for (i=0;i<8;i++){
+            var el1 = document.createElement("div");
+            
+            var el2 = document.createElement("div");
+            el2.innerText = "Summer House";
+            el2.style.color = "white";
+            el2.style.background = "black";
+            el2.style.padding = "30px";
+            el2.style.fontSize = "30px";
+            
+            el1.style.background = 'url("https://www.w3schools.com/w3images/house5.jpg")';
+            el1.style.height = "20em";
+            el1.style.width = "100%";
+            el1.style.backgroundRepeat = "no-repeat";
+            el1.style.backgroundSize = "cover";
+
+            el1.appendChild(el2);
+            sec3.appendChild(el1);
+            console.log(sec3);
+            document.body.appendChild(sec3);
+        }
+    </script>
+</body>
+</html>
