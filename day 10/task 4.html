@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .styles{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="./thor.jpg" alt="Thor Image" height="500px" width="100%">
+    <button onclick="func()">Click Here</button>
+
+    <script>
+        
+        function func(){
+            var a = document.querySelector("img");
+
+            a.classList.toggle("styles");
+
+        }
+    </script>
+</body>
+</html>

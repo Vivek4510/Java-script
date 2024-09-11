@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/07/gotham-season-5-cast.jpg" alt="" id="image1" height="100%" width="50%">
+    <div>
+        <button onclick="image('https://static.dc.com/2024-03/batman_charGal_2024_1.jpg')">Batmam</button>
+        <button onclick="image('https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/21817553/IMG_5A3EE222D5ED_1.jpeg?quality=90&strip=all&crop=0,23.121339677892,100,43.411420204978')">Joker</button>
+        <button onclick="image('https://static.dc.com/dc/files/default_images/GalleryChar_1900x900_Penguin_541d27e7d271c0.25488548.jpg')">Penguin</button>
+        <button onclick="image('https://static.dc.com/dc/files/default_images/GalleryComics_1920x1080_20160203_BM_ARK_SCROW_TP_617763f9c9c7e4.09811550.jpg')">Scare Crow</button>
+    </div>
+
+    <script>
+        function image(b){
+            var a = document.getElementById("image1");
+            a.style.height = "50vh";
+            a.style.width = "50%";
+            a.src = b;
+        }
+    </script>
+</body>
+</html>

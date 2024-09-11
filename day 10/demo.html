@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="name">Click</button>
+    <script>
+        var a = document.getElementById("name");
+        a.addEventListener("click", function(){
+            var b = document.createElement("p");
+            b.innerText = "vivek";
+             
+            document.body.appendChild(b);
+        })
+    </script>
+</body>
+</html>

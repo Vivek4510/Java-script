@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./thor.jpg" alt="Thor Image" height="50%" width="50%" id="id1">
+    <script>
+        function func(){
+            var a = document.getElementById("id1");
+            a.src = "https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/08/Batfleck-Forever.jpg";
+            a.alt = "Batman Image";
+
+            document.body.appendChild(a);
+        }
+        func();
+    </script>
+</body>
+</html>

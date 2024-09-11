@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .styles{
+            font-size: 2em;
+            font-family: 'Courier New', Courier, monospace;
+            color: aqua;
+            background-color: red;
+            padding: 15px;
+
+        }
+    </style>
+</head>
+<body>
+    <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, minus totam. 
+        Delectus quia ullam dolorum nam blanditiis. Quas beatae aut explicabo veritatis, 
+        laudantium dicta? Culpa, veniam consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Accusantium distinctio, quod totam corporis facere harum modi sit veniam perspiciatis iste
+        incidunt dolorum voluptate placeat officia! A asperiores aspernatur facilis nobis?</p></div>
+    
+    <button onclick="func();">Click Here</button>
+    <script>
+        var count = true;
+        function func(){
+            var div = document.querySelector("div");
+
+            if(count == true){
+                div.classList.add("styles");
+                count = false;
+            }
+            else{
+                div.classList.remove("styles");
+                count = true;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, minus totam. 
+        Delectus quia ullam dolorum nam blanditiis. Quas beatae aut explicabo veritatis, 
+        laudantium dicta? Culpa, veniam consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Accusantium distinctio, quod totam corporis facere harum modi sit veniam perspiciatis iste
+        incidunt dolorum voluptate placeat officia! A asperiores aspernatur facilis nobis?</p></div>
+    
+    <button>Click here</button>
+
+    <script>
+        var btn = document.querySelector("button");
+        btn.style.marginTop = "20px"
+
+        btn.addEventListener("click", function(){
+            var div = document.querySelector("div");
+            div.style.background = "red";
+            div.style.color = "aqua";
+            div.innerText = "An interesting thing about this text generator is that it gives us the option to choose which characters in the show we want to quote. For us, the two best will undeniably be Heisenberg himself and Pinkman, which have some of the best lines in the entire series.With all of that said, it’s true that these quotes are bound to reflect both the humour and the violence in the show. While most people will welcome the humour, it’s possible that not everyone will be down with the violence and constant references to meth. What can you do, right?";
+        });
+
+        btn.addEventListener("dblclick",function(){
+            var div = document.querySelector("div");
+            div.style.background = "blue";
+            div.style.color = "yellow";
+            div.innerText = "Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to."
+        });
+    </script> 
+</body>
+</html>
