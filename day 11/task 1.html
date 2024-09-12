@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="password" name="password" id="inp1" placeholder="Enter your password" value=""><br>
+        <span>Please enter the Password</span><br>
+        <input type="submit" name="submit" id="inp2">
+    </form>
+
+    <script>
+        var form = document.forms[0];
+        form.addEventListener("submit",function(event){
+            event.preventDefault();
+
+            var b = document.querySelector("input");
+
+            if(b.value.length>10){
+                console.log("The password is strong");
+            }
+            else if(b.value.length<=10 && b.value.length>6){
+                console.log("The password is medium");
+            }
+            else if(b.value.length<=6 && b.value.length>0){
+                console.log("The password is weak");
+            }
+            else{
+                var span = document.querySelector("span");
+                span.style.display = "block";
+            }
+            b.value=''
+        })
+    </script>
+</body>
+</html>

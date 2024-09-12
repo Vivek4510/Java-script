@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="txt1" id="txt1" placeholder="Enter First Number">
+        <input type="text" name="txt2" id="txt2" placeholder="Enter Second Number"><br><br>
+        <input type="submit" id="submit" value="ADD" onclick="func()">
+        <input type="submit" id="submit" value="SUBTRACT" onclick="fun1()">
+        <input type="submit" id="submit" value="MULTIPLY" onclick="fun2()">
+        <input type="submit" id="submit" value="DIVIDE" onclick="fun3()">
+    </form>
+
+    <script>
+        var form = document.forms[0];
+
+        function func(){
+            event.preventDefault();
+
+            var in1 = document.getElementById("txt1");
+            var in2 = document.getElementById("txt2");
+
+            var res = Number(in1.value)+ Number(in2.value);
+            console.log(res);
+
+            in1.value='';
+            in2.value='';
+        }
+
+        function fun1(){
+            event.preventDefault();
+
+            var in1 = document.getElementById("txt1");
+            var in2 = document.getElementById("txt2");
+
+            var res = Number(in1.value) - Number(in2.value);
+            console.log(res);
+
+            in1.value='';
+            in2.value='';
+        }
+
+        function fun2(){
+            event.preventDefault();
+
+            var in1 = document.getElementById("txt1");
+            var in2 = document.getElementById("txt2");
+
+            var res = Number(in1.value) * Number(in2.value);
+            console.log(res);
+
+            in1.value='';
+            in2.value='';
+        }
+
+        function fun3(){
+            event.preventDefault();
+
+            var in1 = document.getElementById("txt1");
+            var in2 = document.getElementById("txt2");
+
+            var res = Number(in1.value) / Number(in2.value);
+            console.log(res);
+
+            in1.value='';
+            in2.value='';
+        }
+    </script>
+</body>
+</html>
