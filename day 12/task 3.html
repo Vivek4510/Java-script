@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = prompt("Enter a text");
+        var count = 0;
+        var cons = 0;
+        var a = str.toLowerCase();
+
+        for(i in a){
+            if(a[i]=="a" || a[i]=="e" || a[i]=="i" || a[i]=="o" || a[i]=="u"){
+                count++;
+            }
+            else{
+                cons++;
+            }
+        }
+        console.log("Total Length : "+ a.length);
+        console.log("Number of vowels : "+count);
+        console.log("Number of consonants : "+cons);
+    </script>
+</body>
+</html>
