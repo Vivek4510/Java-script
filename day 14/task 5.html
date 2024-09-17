@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ["Batman", "Joker", "Riddler", "Bane", 3, 4, 5, 6, true, {name: "Wayne"}];
+        let str = [];
+        let num = [];
+        let bool = [];
+        let obj = [];
+
+        for(i in arr){
+            var datatype = typeof(arr[i]);
+
+            if(datatype == "string"){
+                str.push(arr[i]);
+            }
+            else if(datatype == "number"){
+                num.push(arr[i]);
+            }
+            else if(datatype == "boolean"){
+                bool.push(arr[i]);
+            }
+            else if(datatype == "object"){
+                obj.push(arr[i]);
+            }
+            else{
+                console.log("Invalid Data Type")
+            }
+        }
+
+        console.log(str);
+        console.log(num);
+        console.log(bool);
+        console.log(obj);
+    </script>
+</body>
+</html>
