@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 50vh;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+    <button id="gen">Generate</button>
+
+    <script>
+        var mn = document.querySelector(".main");
+        var btn = document.querySelector("#gen");
+        let i = 0;
+        btn.addEventListener("click", () =>{
+            var arr = ["red","yellow","pink"];
+                mn.style.backgroundColor = arr[i];
+                i++;
+
+                if(i>=arr.length){
+                    i=0;
+                }
+        });
+    </script>
+</body>
+</html>
