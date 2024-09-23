@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: quartz;
+            src: url(./orloj-font/Orloj-Ea9eW.otf);
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        div{
+            height: 100vh;
+            background-color: black;
+            font-size: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .watch, .date{
+            border: 5px solid white;
+            height: 150px;
+            width:50%;
+            border-radius: 20px;
+            color: black;
+            background-color: white;
+            font-family: quartz;
+        }
+        .watch{
+            letter-spacing: 5px;
+        }
+        .date{
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div onload="date()" class="date"></div>
+        <div onload="time()" class="watch"></div>
+    </div>
+
+    <script>
+        function date(){
+            arr = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"];
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
+            var dy = arr[date.getDay()];
+            
+            date = d + "/" + m + "/" + y + " - "+dy;
+            document.getElementsByClassName("date")[0].innerText = date;
+            setTimeout(date,1000);
+        }
+        date();
+
+
+        function time(){
+            var t = new Date();
+            var hr = t.getHours();
+            var min = t.getMinutes();
+            var sec = t.getSeconds();
+            var sess = "AM";
+
+            if(hr>12){
+                hr=hr-12;
+                sess = "PM";
+            }
+            if(hr==0){
+                hr = 12;
+            }
+            if(hr<10){
+                hr="0"+hr;
+            }
+            if(min<10){
+                min="0"+min;
+            }
+            if(sec<10){
+                sec = "0"+sec;
+            }
+            clock = hr + ":" + min + ":" + sec + " " + sess;
+            document.getElementsByClassName("watch")[0].innerText = clock;
+            setTimeout(time,1000);
+            console.log(clock);
+        }
+        time();
+    </script>
+</body>
+</html>
