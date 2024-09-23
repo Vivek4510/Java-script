@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="date">Enter your DOB : </label>
+    <input type="date" name="date" id="date">
+    <button onclick="fun()">Submit</button>
+
+    <script>
+        function fun(){
+            arr = [1,2,3,4,5,6,7,8,9,10,11,12];
+            var userdate = document.getElementById("date").value;
+            var date = new Date(userdate);
+            var ud =  date.getDate();
+            var um = arr[date.getMonth()];
+            var uy = date.getFullYear();
+
+            var curdate = new Date();
+            var cd = curdate.getDate();
+            var cm = arr[curdate.getMonth()];
+            var cy = curdate.getFullYear();
+
+            var yd = cy-uy;
+            var md = cm-um;
+            var dd = cd-ud;
+
+            var age = "Your age is : " + yd + " Years " + md + " Months " + dd + " Days ";
+            console.log(age);
+    
+    
+        }
+
+
+    </script>
+</body>
+</html>
