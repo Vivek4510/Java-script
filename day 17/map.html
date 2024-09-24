@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Cards</title>
+    <title>Document</title>
     <style>
-        .card {
+        .box {
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 16px;
@@ -13,24 +13,24 @@
             width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .card img {
+        .box img {
             width: 100%;
             height: auto;
             border-radius: 8px;
         }
-        .card h3 {
+        .box h3 {
             font-size: 1.5em;
             margin: 8px 0;
         }
-        .card p {
+        .box p {
             font-size: 1em;
         }
-        .card .price {
+        .box .price {
             font-size: 2em;
             font-weight: bold;
             margin: 8px 0px;
         }
-        .card-container {
+        .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
@@ -39,7 +39,7 @@
 </head>
 <body>
 
-<div class="card-container" id="card-container"></div>
+<div class="container" id="container"></div>
 
 <script>
     const obj = [
@@ -285,10 +285,10 @@
       }
     ];
 
-    const cardContainer = document.getElementById("card-container");
+    const Container = document.getElementById("container");
 
-    cardContainer.innerHTML = obj.map(item => `
-        <div class="card">
+    Container.innerHTML = obj.map(item => `
+        <div class="box">
             <img src="${item.image}" alt="${item.title}">
             <h3>${item.title}</h3>
             <p>${item.description}</p>
