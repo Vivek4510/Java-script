@@ -55,6 +55,13 @@
             var m = date.getMonth();
             var y = date.getFullYear();
             var dy = arr[date.getDay()];
+
+            if(d<10){
+                d="0"+d;
+            }
+            if(m<10){
+                m="0"+m;
+            }
             
             date = d + "/" + m + "/" + y + " - "+dy;
             document.getElementsByClassName("date")[0].innerText = date;
