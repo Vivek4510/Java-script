@@ -6,15 +6,48 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        async function fun(){
-            let apicall = await fetch("https://fakestoreapi.com/products/");
-            let apidata = apicall.json();
-            console.log(apidata);
+    <div id="container"></div>
 
+    <script>
+        let data = JSON.parse(localStorage.getItem("Array"));
+
+        let mapdata = data.map((val) =>{
+            let container = document.getElementById("container");
+
+            let box = document.createElement("div");
             
-        }
-        fun();
+            let images = document.createElement("img");
+            let titles = document.createElement("div");
+            let texts = document.createElement("div");
+            let prices = document.createElement("div");
+            let ratings = document.createElement("div");
+            let btn = document.createElement("button");
+
+            images.style.height = "200px";
+            images.style.width = "200px";
+            images.style.paddingLeft = "25%";
+        
+            box.style.width = "95%"
+            box.style.border = "2px solid black";
+            box.style.padding = "10px";
+            texts.style.paddingBottom = "15px";
+            prices.style.paddingBottom = "15px";
+            ratings.style.paddingBottom = "15px";
+
+            images.src = val.image;
+            titles.innerHTML = "<h3>TITLE : "+val.title+"</h3>";
+            texts.innerHTML = "<b>Description : </b><br>"+ val.description;
+            prices.innerHTML = "<b>Price : </b>$"+ val.price;
+            ratings.innerHTML = "<b>Rating : </b>"+ val.rating.rate+"/5<br><br>" +"<b>Reviews : </b>" +val.rating.count + " Reviews";
+
+            btn.innerText = "Remove from cart";
+            btn.addEventListener("click",()=>{
+                box.style.display =  "none";
+            })
+            box.append(images,titles,texts,prices,ratings,btn);
+            container.appendChild(box);
+        })
+
     </script>
 </body>
 </html>
